@@ -66,6 +66,9 @@ function Square(props)
       if (CalculationWinner(squares) || squares[i]){
         return;
       }
+
+      if(this.state.stepNumber > 6)
+        return;
       squares[i] = this.state.xIsNext ? 'X' : 'O';
       this.setState({history: history.concat([{squares: squares,
       }]),
@@ -107,7 +110,10 @@ function Square(props)
         status = 'Winner: ' + winner;
       } 
       else{
-        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        if(this.state.stepNumber > 6)
+           status = 'Tie';
+        else
+           status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
       return (
         <div className="game">

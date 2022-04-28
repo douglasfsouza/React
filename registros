@@ -55,3 +55,10 @@ componentWillUpdate()
 	
 Desmontagem
    Nesta fase, o componente não é mais necessário e será desmontado do DOM. O método que se chama nesta fase é o: componentWillUnmount()
+
+para funcionar no linux:   
+     sudo apt-get install nginx
+	 entrar na pasta do projeto  
+     npm install --save
+	 npm run build
+	 npm start

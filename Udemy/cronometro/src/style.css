@@ -1,0 +1,36 @@
+.container{
+    color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img{
+    margin-top: 200px;
+}
+
+.num{
+    font-size: 40px;
+    color: black;
+    margin-top: -120px;
+    top: 200px;
+}
+.areabtn{
+    margin-top: 100px;
+}
+.botao{
+    font-size: large;
+    color: black;
+    border-radius: 10px;
+    border: 20px;
+    border-style:inset;
+    cursor: pointer;
+    padding: 5px;
+     
+}
+
+.botao:hover{
+    color: brown;
+    background-color: black;
+}

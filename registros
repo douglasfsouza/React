@@ -62,3 +62,17 @@ para funcionar no linux:
      npm install --save
 	 npm run build
 	 npm start
+	 
+Hooks:
+   - Diponivel apartir da versao 16.4 do React
+   - Utilizar funcoes e não componentes
+       import {useState}
+   - Menos verboso
+   - as funcoes usam state
+   - funcoes dentro de funcoes
+   -UseEffect 
+       Substitui os processos de ciclo de vida, ex didupdate, disamount..
+   useEffect(funcao a ser chamada, variavel a ser monitorada)
+   
+   
+ 

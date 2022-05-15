@@ -74,5 +74,71 @@ Hooks:
        Substitui os processos de ciclo de vida, ex didupdate, disamount..
    useEffect(funcao a ser chamada, variavel a ser monitorada)
    
+ Rotas
+   npm install react-router-dom
+   import {BrowserRouter, Routes, Route} from 'react-router-dom';
+   import {Link} from 'react-router-dom';
+   routes.js:
+        import React from "react";
+		import {BrowserRouter, Routes, Route} from 'react-router-dom';
+		import Home from './pages/Home';
+		import Sobre from './pages/Sobre';
+		import Contato from './pages/Contato';
+
+		function RoutesApp(){
+			return(
+				<BrowserRouter>
+					<Routes>
+						<Route path='/' element={<Home/>} />
+						<Route path='/sobre' element={<Sobre/>} />
+						<Route path="/contato" element={<Contato/>}/>
+					</Routes>
+				</BrowserRouter>
+			)
+		}
+
+		export default RoutesApp;
+    *** fim de routes.js
+   exemplo de App.js:
+         import React from "react";
+		 import RoutesApp from './routes';
+		function App() {
+		  return (
+			<div >
+				<RoutesApp/>
+			</div>
+		  );
+		}
+
+		export default App;
+
+		** fim de App.js
+
+   exemplo de Sobre.js:
+        import React from "react";
+		import {Link} from 'react-router-dom';
+		function Sobre(){
+			return(
+				<div>
+					<h1>Pagina Sobre a Empresa</h1>
+					<Link to='/'>Home</Link> <br/>
+					<Link to='/contato'>Contato</Link>
+				</div>
+				
+			)
+		}
+
+		export default Sobre;
+		** fim de Sobre.js
    
- 
+ axious
+    npm install axious
+	   uma alternativa melhor para o fetch
+	   
+Gravar no localStorage:
+ localStorage.setItem('task',JSON.stringify(tarefa));
+Receperar do localStorage:
+   const taskStorage = localStorage.getItem('task');
+    if (taskStorage){
+      setTarefa(JSON.parse(taskStorage));
+    }  

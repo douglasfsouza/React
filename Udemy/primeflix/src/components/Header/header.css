@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+.logo{
+    cursor: pointer;
+    background-color: aliceblue;
+    padding: 5px 14px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.favoritos{
+    cursor: pointer;
+    background-color: aliceblue;
+    padding: 5px 14px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.logo:hover{
+    background-color: brown;
+    color:aliceblue;
+}
+.favoritos:hover{
+    background-color: brown;
+    color:aliceblue;
+}

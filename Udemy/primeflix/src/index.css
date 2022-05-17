@@ -130,3 +130,15 @@ app{
   flex-direction: column;
   align-items: center;
 }
+
+.erro404{
+  font-size: 80px;
+  font-style:oblique;
+}
+
+.paginaErro{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

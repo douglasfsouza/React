@@ -28,7 +28,7 @@ function Home(){
              <h1>Filmes Lançamentos</h1><br/>
              {filmes.map((x) => {
                  return(                    
-                     <div>
+                     <div key={x.id}>
                         <div className='container'>
                             <div className='titulo'>
                               <strong key={x.id} >{x.title} - {x.original_title}</strong>

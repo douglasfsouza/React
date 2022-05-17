@@ -1,4 +1,5 @@
 import { useEffect,useState } from "react";
+import { toast } from "react-toastify";
 import api from '../../services/api';
 
 
@@ -9,7 +10,6 @@ import api from '../../services/api';
       useEffect(()=>{
          function loadFavorites(){
               const movies = localStorage.getItem('movies');
-              debugger;
               if (movies){
                     console.log('load favorites');
                     console.log(JSON.parse(movies));            
@@ -40,7 +40,7 @@ import api from '../../services/api';
                 console.log('carregando o filme: ' + id );
                 console.log(response.data);
                 setFilme(response.data);  
-                debugger;
+               // debugger;
                 let nmovies = filmes;
 
                 nmovies.push({id:response.data.id, descricao:response.data.title});
@@ -58,32 +58,33 @@ import api from '../../services/api';
         let newMovies = [];
         let newFilmes = [];
         let movies = filmes;
-        debugger;
+        
         movies.map((x)=>{
             if (x.id != e.target.id){
-                debugger;
+                
                 newMovies.push(x.id);
                 newFilmes.push({id:x.id, descricao:x.descricao});
             }  
         })
-        debugger;
+        
         localStorage.setItem('movies',JSON.stringify(newMovies));
-        setFilmes(newFilmes);       
+        setFilmes(newFilmes);   
+        toast.success("Filme excluido da lista");    
     }
     
      return(
-         <div className="favoritos">
-             <div>
+         <div key={'favoritos'} className="favoritos">
+             <div key={'h11_favoritos'}>
                  <h1>Meus filmes Favoritos</h1>
              </div>
 
-             <div>
+             <div key={'favoritos_lista'}>
                 <ul>
                      {filmes.map((x)=>{
                          return(
-                            <li>
-                                <span>{x.descricao}  </span>
-                                <label id={x.id} className="botoes" onClick={excluir}> Excluir</label><br/>
+                            <li key={'li_favoritos_' + x.id}>
+                                <span key={'descricao_favoritos_' + x.id}>{x.descricao}  </span>
+                                <label key={'label_favoritos_2_' + x.id} id={x.id} className="botoes" onClick={excluir}> Excluir</label><br/>
                                 
                             </li> 
                          )

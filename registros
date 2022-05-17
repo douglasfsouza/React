@@ -142,3 +142,37 @@ Receperar do localStorage:
     if (taskStorage){
       setTarefa(JSON.parse(taskStorage));
     }  
+	
+Navegar para outra pagina
+  useNavitate
+     ex. const navigate = useNavitate();
+	     navigate("/", {replace:true});
+		 
+React-toastify
+   para mostrar mensagens toast
+   npm install --save react-toastify
+   no App.js:
+      import {ToastContainer} from 'react-toastify';
+	  import 'react-toastify/dist/ReactToastify.css';  
+	  <ToastContainer autoClose={3000}/>
+   usar:
+      toast.success("minha mensagem");
+	  toast.warn("outra mensagem";
+
+build:
+  Hospedagem gratuita em netlify
+  npm run build
+     cria a pasta build
+  se usa roteamento no projeto:
+    criar o arquivo public/_redirects
+	   preencher o arquivo _redirects com:
+	       /* /index.html 200
+	gerar o build novamente
+       npm run build
+deploy:
+  npm install -g netlify-cli	
+  via linha de comando:
+      netlify deploy
+          cria como draft
+      netlify deploy prod
+         para subir pra producao	  

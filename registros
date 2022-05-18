@@ -175,4 +175,56 @@ deploy:
       netlify deploy
           cria como draft
       netlify deploy prod
-         para subir pra producao	  
+         para subir pra producao
+ContextApi:
+   user.js:
+        import {useState, createContext} from 'react';
+		export const UserContext = createContext({});
+
+		function UserProvider({children}){
+			const [alunos,setAlunos] = useState('Nico');
+			return(
+				<UserContext.Provider value={{alunos,setAlunos}}>
+					{children}
+				</UserContext.Provider>
+			)
+		}
+
+		export default UserProvider;  
+		***********************
+		App.js:
+		    import { useState } from "react";
+			import Alunos from "./Alunos";
+			import UserProvider from "./contexts/user";
+
+			function App() {  
+			  return (
+				<UserProvider>
+				  <div >
+					<h1>ESCOLA</h1>
+					<h2/>
+					  <Alunos/>
+				  </div>
+				</UserProvider>    
+			  );
+			}
+
+			export default App;
+			***************************
+			nome.js:
+				import { useContext } from "react";
+				import { UserContext } from "../contexts/user";
+
+				function Nome(){
+					const {alunos,setAlunos} = useContext(UserContext);
+					return(
+						<div>
+							<span style={{color:'red'}}>Nome:{alunos}</span>
+							<br/>
+							<button onClick={()=>setAlunos('Math')}>Mudar</button>
+							<br/>             
+						</div>
+					)
+				}
+				export default Nome;
+				******************************

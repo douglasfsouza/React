@@ -228,3 +228,12 @@ ContextApi:
 				}
 				export default Nome;
 				******************************
+Icones:
+  - npm install react-icons
+  - import {iconname} from 'react-icons/fi';
+  
+datas:
+  npm install date-fns
+  import {format} from 'date-fns';
+  format(new Date(),'dd/MM/yyyy');
+  

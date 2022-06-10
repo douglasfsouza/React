@@ -237,3 +237,21 @@ datas:
   import {format} from 'date-fns';
   format(new Date(),'dd/MM/yyyy');
   
+ Versao do react-router-dom com switch:
+    npm install react-router-dom@5
+
+Instalar componentes de estilos:
+  npm install styled-components
+styles.js:
+  import styled from 'styled-components';
+  export const Title = styled.h1`
+     color: #FF0000
+  `;
+ index.js:
+   import {Title} from './styles';
+   return(
+        <div>
+            <Title/>
+        </div>
+    )
+  

@@ -1,4 +1,6 @@
-Begin on 2022-03-18
+Begin on    2022-03-18
+Finished on 2022-06-14
+instrutor Matheus Fraga (muito bom)
 
 instalar o react:
    npm install -g create-react-app
@@ -255,3 +257,52 @@ styles.js:
         </div>
     )
   
+ Redux
+    para ter um controle global dos stados, 
+	O redux é dividiso em : store, reducers e actions.
+	por exemplo um player de musica que precisa acessado em varias paginas
+	
+	ex:
+	   playlist -> Action {type: 'add_to_play' playlist:{...}}  -> Redux Store(Player,  User...)
+	   Player <- Redux Store
+	   
+	 A store
+Store:
+"store" é o nome dado pelo Facebook para o conjunto de estados da sua aplicação. 
+   Vamos pensar na store como um grande centro de informações, 
+   que possui disponibilidade para receber e entregar exatamente o que o seu componente requisita 
+   (seja uma função, ou uma informação propriamente dita). 
+   A store é um objeto JavaScript que possui todos os estados dos seus componentes.
+   
+Reducer:
+  Cada dado da store deve ter o seu próprio reducer, 
+  por exemplo: o dado "user" teria o seu reducer, chamado  só para User. 
+  Um reducer é encarregado de lidar com todas as ações, 
+  como algum componente pedindo para alterar algum dado da store.
+  
+Actions:
+  Actions são responsáveis por requisitar algo para um reducer. 
+  Elas devem ser sempre funções puras, 
+  dizendo de uma forma leiga, ou seja elas devem APENAS enviar os dados ao reducer, nada além disso. 
+  Disparar uma ação apenas levando os dados que você deseja enviar 
+  e o reducer vai receber e usar os dados.
+ 
+api-fake:
+  npm install -g json-server
+  para rodar:
+     no cmd dentro da pasta src do projeto:
+        json-server server.json -p 3333
+npm install redux
+npm install react-redux
+
+npm install immer -> uma biblioteca para manipular os estados imutaveis, 
+   tira uma copia do estado e depois atualiza o estado original de forma automatica
+
+npm install redux-saga
+   Saga  é um midleware  para fazer comunicacao entre o reducer e o store
+  
+function* -> generator, como async, porem melhor
+
+npm install history
+
+	      

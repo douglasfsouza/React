@@ -1,0 +1,220 @@
+.header{
+    width: 1820px;
+}
+.form{
+     background-color: aqua;
+     font-family: sans-serif 'Times New Roman', Times, serif;
+     font-size: 20px;
+     display: flex;
+     flex-direction: row;
+     padding: 15px 5px 15px 15px;     
+     justify-content: space-between;     
+     max-height: 30px;
+}
+
+.firstFields{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(14, 110, 139);
+    width: 100%;
+    max-width: 400px;
+    max-height: 30px;
+    min-width: fit-content;
+    color: #FFF;
+}
+
+.inputs{
+    font-size: 15px;
+    max-width: 70px;
+    min-width: 80px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.txtFind{
+    width: 300px;
+}
+
+.tabela{
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: auto;     
+    width: 100%;
+}
+
+.headertable{
+    background-color: rgb(1, 34, 97);
+    color: red;
+    flex-direction: column ;
+    justify-content:space-between;
+    padding: auto;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.tableDetail{
+    background-color: rgb(1, 34, 97);
+    color: red;
+    flex-direction: column ;
+    justify-content:space-between;
+    padding: auto;
+    align-items: left;
+    text-align: left;
+    width: 100%;
+   
+}
+
+.totals{
+    background-color: #000;
+    color:blue;
+    min-width: 100px;
+    text-align:  center;
+    width:fit-content;
+}
+
+.button{
+    cursor: pointer;
+    font-size: 15px;
+    justify-items: top;
+    align-items: top;    
+    min-width: 2px;
+    width:min-content;
+    text-align: top;
+    margin-top: 2px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.icon-add{
+    background-color: transparent;
+    color: #FFF;
+    padding-left: 0;
+    margin-left: 0;
+    width: 20px;
+
+}
+
+.icon-add{
+    padding: 2px;
+    margin-top: 2px;
+}
+
+.button:hover{
+    background-color: blue;
+    color: rgb(109, 6, 156);
+}
+
+.find{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding-bottom: 5px;
+    max-height: 30px;
+}
+
+.findIcon{   
+    border: none;   
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;  
+}
+
+.iconAct:hover{
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 1300px) {
+    .header{
+        font-size: 15px;
+        width: 420px;
+        border: 0;
+        padding:0;        
+    }
+    .form{          
+        display:table;
+        align-content:space-between;
+        flex-direction: column;       
+        font-size: 20px;    
+        width: 420px;
+        border: 0;
+        padding:0;  
+   }
+
+   
+   .tabela{
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: auto;     
+    width: 420px;
+    font-size: 10px;
+    justify-items: auto;
+    justify-content: space-between;     
+}
+
+   
+.headertable{   
+    justify-content:space-between;
+    padding: auto;
+    text-align: left;
+    text-transform: uppercase;
+    max-width: 300px;    
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.tableDetail{     
+    justify-content:left;
+    padding: auto;
+    align-items: left;
+    text-align: left;
+    width: 1300px;   
+    font-size: 15px;
+    word-wrap:break-word;
+}   
+
+
+.totals{
+    background-color: #000;
+    color:#FFF;
+    min-width: 50px;
+    text-align:  center;
+    font-size: 15px;
+}
+
+.button{
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 0;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    height: 25px;
+    text-align: center;
+}
+
+.inputs{
+    font-size: 15px;
+    max-width: 50px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.labels{
+    font-size: 15px;
+}
+
+.find{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    padding-bottom: 5px;
+}
+    
+}

@@ -16,11 +16,18 @@ export default function Home(){
     const [credito, setCredito] = useState(0);
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
+    const [usu, setUsu] = useState(1198);
 
-    const baseURL = "http://localhost/api/Despesas";
+    const baseURL = "http://192.168.15.201:63351/api/Despesas";
+    const baseURL2 = "http://192.168.15.201/api/Despesas";
+    const baseURL1 = "https://20.226.29.149/dsp/api/Despesas";
 
     async function loadDsp(search){
         if (loading){
+            return;
+        }
+        if (usu != 1198){
+            console.log("usu:",usu);
             return;
         }
         console.log('loadDsp com mes ' + indexMes);
@@ -135,7 +142,7 @@ export default function Home(){
 
     useEffect(()=>{           
         loadDsp(false);        
-    },[tipo, ano, mes]);
+    },[tipo, ano, mes, usu]);
      
 
     function handleChangeYear(e){
@@ -158,7 +165,9 @@ export default function Home(){
     }
 
     function handleFind(){
-        debugger;
+        if (usu != 1198){
+            return;
+        }
         if(find == ''){
             let msg = "Texto de busca não informado";
             toast.warn(msg);
@@ -168,7 +177,10 @@ export default function Home(){
         loadDsp(true);
     }
 
-    async function getSummary(){        
+    async function getSummary(){    
+        if (usu != 1198){
+            return;
+        }    
         let url = baseURL +  "/GetListSummary";
          
         let body = [
@@ -253,6 +265,10 @@ export default function Home(){
         })
     }
 
+    function handleUsu(e){
+        setUsu(e.target.value);
+    }
+
     return(
         <div>
             <div className="header">
@@ -285,8 +301,8 @@ export default function Home(){
                         </select>
 
 
-                        <Link to="/edit/0"  className='button, icon-add'  >
-                            <MdAddToQueue size={15} className="icon-add" />                            
+                        <Link to={usu==1198 ? '/edit/0' : '#'}  className='button, icon-add'  >
+                            <MdAddToQueue size={15} visibility={usu==1198?'visible':'hidden'} className="icon-add" />                            
                         </Link>
                     </div>                    
 
@@ -305,7 +321,12 @@ export default function Home(){
                     <div className='find'>
                         <input className='txtFind' type="text" value={find} onChange={(e)=>handleChangeFind(e)} /> 
                         <MdOutlineFindInPage className='findIcon' onClick={()=>handleFind()}/>
-                    </div>                    
+                    </div>  
+
+                    <div>
+                        <label>Codigo:</label>
+                            <input className='usu' type="text" value={usu} onChange={(e)=>handleUsu(e)}/>
+                    </div>                  
                 </form>
 
                 <table className='tabela'>

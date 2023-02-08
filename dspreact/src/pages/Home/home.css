@@ -77,6 +77,17 @@
     width:fit-content;
 }
 
+.usu{
+    background-color: #000;
+    color:blue;
+    min-width: 80px;
+    min-height: 25px;
+    text-align:  center;
+    width: 80px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
 .button{
     cursor: pointer;
     font-size: 15px;
@@ -155,7 +166,7 @@
     width: 420px;
     font-size: 10px;
     justify-items: auto;
-    justify-content: space-between;     
+    justify-content: space-between;  
 }
 
    

@@ -8,11 +8,13 @@ export default function Edit(){
     const [data, setData] = useState(format(new Date(),'yyyy-MM-dd'));
     const [descricao, setDescricao] = useState('');
     const [tipo, setTipo] = useState('Crédito');
-    const [valor, setValor] = useState(1);
+    const [valor, setValor] = useState(0);
     const id = useParams();
 
-    const baseURL = "http://localhost/api/Despesas";
-
+    const baseURL = "http://192.168.15.201:63351/api/Despesas";
+    const baseURL2 = "http://192.168.15.201/api/Despesas";
+    const baseURL1 = "https://20.226.29.149/dsp/api/Despesas";
+    
     useEffect(()=>{
         loadDsp();
     },[]);

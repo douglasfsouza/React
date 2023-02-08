@@ -1,0 +1,144 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+app{
+  width: 100%;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.poster{
+  width: 500px;
+  height: 800px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  padding-bottom: 50px;
+}
+
+.botoes{
+  border: solid;
+  border-radius: 5px;
+  border-color: cadetblue;
+  background-color: darkgreen;
+  color: white;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.botoes:hover{
+  background-color: rgb(127, 16, 231);
+  color: black;
+  text-decoration: none;
+}
+
+.overview{
+  border: none;
+  width: 500px;
+  font-style: italic;
+  color: blueviolet;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.titulo{
+  font-size: 30px;
+  width: 500px;
+  text-align: justify;
+}
+
+.filme{
+  width: 800px;
+  height: 800px;
+}
+
+.imgA{
+  width: 200px;
+  height: 600px;
+  margin-left: 10px;
+  margin-top: 20px;
+  top: 100px;
+}
+
+.imgB{
+  width: 200px;
+  height: 600px;
+  margin-left: 700px;
+  margin-top: 20px;
+  top: 100px;
+}
+
+.detFilme{
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  color: aliceblue;
+  height: 1200px ;
+}
+
+.doisfilmes{
+  display: flex;
+}
+.tituloOriginal{
+  top: 500px;
+  margin-top: 200px;
+}
+
+
+.imgProdutoras{
+   width: 200px;
+   height: 200px;
+   padding-left: 10px;
+   padding-bottom: 10px;
+}
+.produtoras{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-color: aqua;
+  height: 230px;
+  width: 1700px;
+  margin-left: 10px; 
+  
+  padding: 10px 150px 10px 10px;
+  
+}
+
+.tarefasFilme{
+  background-color: black;
+  width: 1795px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favoritos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.erro404{
+  font-size: 80px;
+  font-style:oblique;
+}
+
+.paginaErro{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

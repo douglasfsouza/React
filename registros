@@ -178,6 +178,13 @@ deploy:
           cria como draft
       netlify deploy prod
          para subir pra producao
+ Hosperar no iis:
+     - npm run build
+	 - entrar no iis
+	     * criar o pool de aplicativos
+		 * criar o site e apontar para o pool e o caminho da aplicacao fisica
+	 - se usar roteamento:
+	      
 ContextApi:
    user.js:
         import {useState, createContext} from 'react';

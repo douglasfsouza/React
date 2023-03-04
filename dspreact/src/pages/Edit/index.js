@@ -11,8 +11,8 @@ export default function Edit(){
     const [valor, setValor] = useState(0);
     const id = useParams();
 
-    const baseURL = "http://192.168.15.201:63351/api/Despesas";
-    const baseURL2 = "http://192.168.15.201/api/Despesas";
+    const baseURL = "http://192.168.15.42:63351/api/Despesas";
+    const baseURL2 = "http://192.168.15.42/api/Despesas";
     const baseURL1 = "https://20.226.29.149/dsp/api/Despesas";
     
     useEffect(()=>{

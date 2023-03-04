@@ -18,8 +18,8 @@ export default function Home(){
     const [loading, setLoading] = useState(true);
     const [usu, setUsu] = useState(1198);
 
-    const baseURL = "http://192.168.15.201:63351/api/Despesas";
-    const baseURL2 = "http://192.168.15.201/api/Despesas";
+    const baseURL = "http://192.168.15.42:63351/api/Despesas";
+    const baseURL2 = "http://192.168.15.42/api/Despesas";
     const baseURL1 = "https://20.226.29.149/dsp/api/Despesas";
 
     async function loadDsp(search){

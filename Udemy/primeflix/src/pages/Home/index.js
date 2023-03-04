@@ -25,7 +25,7 @@ function Home(){
     },[])
     return(
         <div>
-             <h1>Filmes Lançamentos</h1><br/>
+             <h1> Filmes Lançamentos </h1><br/>
              {filmes.map((x) => {
                  return(                    
                      <div key={x.id}>

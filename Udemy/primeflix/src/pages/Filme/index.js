@@ -100,13 +100,13 @@ function Filme(){
              
             
             <div key={'details_' + id} className='tituloOriginal'>
-                <span key={'span1_' + id}>Id: {id}</span><br/>
-                <span key={'span2_' + id}>Titulo Original: {filme.original_title}</span>
-                <span key={'span3_' + id}>Data de Lançamento: {filme.release_date}</span>                
-                <span key={'span4_' + id}>Popularidade: {filme.popularity}</span><br/>
-                <span key={'span5_' + id}>Homepage: {filme.homepage}</span><br/>
-                <span key={'span6_' + id}>Sinopse: {filme.overview}</span><br/>
-                <span key={'span7_' + id}>Produtoras:</span>                
+                <span key={'span1_' + id}> Id: {id}</span><br/>
+                <span key={'span2_' + id}> - Titulo Original: {filme.original_title}</span>
+                <span key={'span3_' + id}> - Data de Lançamento: {filme.release_date}</span>                
+                <span key={'span4_' + id}> - Popularidade: {filme.popularity}</span><br/>
+                <span key={'span5_' + id}> - Homepage: {filme.homepage}</span><br/>
+                <span key={'span6_' + id}> - Sinopse: {filme.overview}</span><br/>
+                <span key={'span7_' + id}> - Produtoras:</span>                
                  
                 {produtoras.map((x, y=0)=>{                 
                     return(                        
